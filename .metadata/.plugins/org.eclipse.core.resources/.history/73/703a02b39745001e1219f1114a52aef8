@@ -1,0 +1,19 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Homework3 {
+
+	public static void main(String[] args) {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://rahulshettyacademy.com/loginpagePractise/");
+		driver.findElement(By.id("username")).sendKeys("rahulshettyacademy");
+		driver.findElement(By.cssSelector("#password")).sendKeys("leaning");
+		driver.findElement(By.xpath("//label[@class='customradio'] [2]/input")).click();
+		driver.findElement(By.id("okayBtn")).click();
+		//driver.switchTo().alert().accept();
+		driver.findElement(By.id("terms")).click();
+	}
+
+}
